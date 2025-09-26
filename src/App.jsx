@@ -1,5 +1,6 @@
 
 import './App.css'
+import './css/resolved_tickets.css';
 import vectorImage from "./assets/vector1.png";
 import { useEffect, useState } from "react";
 import Tickets from './components/tickets/tickets';
@@ -10,6 +11,8 @@ function App() {
 
 
   const [selectedTickets, setSelectedTickets] = useState([]);
+  const [resolvedTickets, setResolvedTickets] = useState([]);
+
 
   const handleSelect = (ticket) => {
     setSelectedTickets((prev) => {
@@ -17,6 +20,12 @@ function App() {
       return [...prev, ticket];
     });
   };
+  const handleComplete = (ticket) => {
+    setResolvedTickets((prev) => [...prev, ticket]);
+
+    setSelectedTickets((prev) => prev.filter((t) => t.id !== ticket.id));
+  };
+
 
   return (
     <>
@@ -69,7 +78,7 @@ function App() {
 
             <div className="banner-text">
               <p className="banner-inner-text">Resolved</p>
-              <span>0</span>
+              <span>{resolvedTickets.length}</span>
             </div>
 
             <img src={vectorImage} alt="Vector flipped" className="flipped" />
@@ -95,15 +104,27 @@ function App() {
                   <div className="ticket-info">
                     <span className="ticket-title">{t.title}</span>
                   </div>
-                  <button className="complete-btn">Complete</button>
+                  <button
+                    className="complete-btn"
+                    onClick={() => handleComplete(t)}
+                  >
+                    Complete
+                  </button>
                 </div>
               ))
             )}
 
             <h2>Resolved Tasks</h2>
-            
+            {resolvedTickets.length === 0 ? (
+              <p>No tasks resolved yet.</p>
+            ) : (
+              resolvedTickets.map((t) => (
+                <div key={t.id} className="resolved-ticket-card">
+                  #{t.id} - {t.title}
+                </div>
+              ))
+            )}
           </div>
-
         </div>
 
 
