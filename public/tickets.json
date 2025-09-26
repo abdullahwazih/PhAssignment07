@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "title": "Login issue",
+    "description": "Customer is unable to log in to their account. They've tried resetting their password multiple times but still...",
+    "customer": "Alice",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-20T10:15:00Z"
+  },
+  {
+    "id": 2,
+    "title": "Payment failure",
+    "description": "Payment gateway returns error",
+    "customer": "Bob",
+    "priority": "Critical",
+    "status": "In Progress",
+    "createdAt": "2025-09-19T14:30:00Z"
+  },
+  {
+    "id": 3,
+    "title": "UI Bug on dashboard",
+    "description": "Sidebar overlaps content on small screens",
+    "customer": "Charlie",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-09-18T09:00:00Z"
+  },
+  {
+    "id": 4,
+    "title": "Email not sent",
+    "description": "User not receiving confirmation email",
+    "customer": "David",
+    "priority": "High",
+    "status": "Resolved",
+    "createdAt": "2025-09-17T11:20:00Z"
+  },
+  {
+    "id": 5,
+    "title": "Report generation slow",
+    "description": "Takes more than 1 minute to load reports",
+    "customer": "Eve",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-09-16T08:45:00Z"
+  },
+  {
+    "id": 6,
+    "title": "Mobile app crash",
+    "description": "App crashes when opening settings",
+    "customer": "Frank",
+    "priority": "Critical",
+    "status": "In Progress",
+    "createdAt": "2025-09-15T16:10:00Z"
+  },
+  {
+    "id": 7,
+    "title": "Password reset not working",
+    "description": "Reset link expired immediately",
+    "customer": "Grace",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-14T12:50:00Z"
+  },
+  {
+    "id": 8,
+    "title": "Search results inaccurate",
+    "description": "Search returns irrelevant items",
+    "customer": "Hannah",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-09-13T09:25:00Z"
+  },
+  {
+    "id": 9,
+    "title": "Notification delay",
+    "description": "Push notifications delayed by 10 minutes",
+    "customer": "Ibrahim",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-09-12T15:40:00Z"
+  },
+  {
+    "id": 10,
+    "title": "Broken link",
+    "description": "FAQ link leads to 404 page",
+    "customer": "Jack",
+    "priority": "Low",
+    "status": "Resolved",
+    "createdAt": "2025-09-11T07:30:00Z"
+  },
+  {
+    "id": 11,
+    "title": "Export to CSV fails",
+    "description": "Download button doesn’t work",
+    "customer": "Kate",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-10T13:15:00Z"
+  },
+  {
+    "id": 12,
+    "title": "Dark mode bug",
+    "description": "Text invisible in dark mode",
+    "customer": "Leo",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-09-09T11:05:00Z"
+  },
+  {
+    "id": 13,
+    "title": "Invoice mismatch",
+    "description": "Wrong amount shown in invoice",
+    "customer": "Maria",
+    "priority": "Critical",
+    "status": "Open",
+    "createdAt": "2025-09-08T14:00:00Z"
+  },
+  {
+    "id": 14,
+    "title": "Chat support offline",
+    "description": "Live chat not connecting to agent",
+    "customer": "Nina",
+    "priority": "High",
+    "status": "Resolved",
+    "createdAt": "2025-09-07T17:20:00Z"
+  }
+]
