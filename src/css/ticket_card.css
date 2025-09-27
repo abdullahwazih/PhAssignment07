@@ -1,0 +1,52 @@
+/* Status-specific styles */
+.ticket-status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* OPEN status */
+.ticket.open {
+  border-left: 5px solid #28a745;          /* green border */
+}
+.ticket-status.open {
+  background-color: #e6f9ed;               /* light green background */
+  color: #1b7c34;
+}
+
+/* IN-PROGRESS status */
+.ticket.in-progress {
+  border-left: 5px solid #ff9800;          /* orange border */
+}
+.ticket-status.in-progress {
+  background-color: #fff4e0;               /* light orange background */
+  color: #d67a00;
+}
+
+/* RESOLVED status (optional) */
+.ticket.resolved {
+  border-left: 5px solid #007bff;          /* blue border */
+}
+.ticket-status.resolved {
+  background-color: #e0f0ff;               /* light blue background */
+  color: #0056b3;
+}
+
+.ticket-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+.priority-low {
+  color: green;
+}
+
+.priority-medium {
+  color: orange; 
+}
+
+.priority-high {
+  color: red;
+}

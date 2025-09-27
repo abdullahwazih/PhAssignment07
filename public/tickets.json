@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Login issue",
-    "description": "Customer is unable to log in to their account. They've tried resetting their password multiple times but still...",
+    "description": "Customer is unable to log in to their account. They've tried resetting their password multiple times but still face the same issue. The login button keeps spinning without loading the dashboard, and no error message is displayed to guide the user.",
     "customer": "Alice",
     "priority": "High",
     "status": "Open",
@@ -11,16 +11,16 @@
   {
     "id": 2,
     "title": "Payment failure",
-    "description": "Payment gateway returns error",
+    "description": "Payment gateway returns an error every time the user tries to complete the checkout process. The error code suggests a possible timeout while connecting to the third-party payment processor, leaving customers frustrated and unable to make purchases.",
     "customer": "Bob",
-    "priority": "Critical",
+    "priority": "Low",
     "status": "In Progress",
     "createdAt": "2025-09-19T14:30:00Z"
   },
   {
     "id": 3,
     "title": "UI Bug on dashboard",
-    "description": "Sidebar overlaps content on small screens",
+    "description": "The sidebar overlaps the main content when viewed on smaller screens, making buttons and links hard to click. The bug mainly affects mobile users and those using tablet devices in portrait mode. This has been reported by several customers recently.",
     "customer": "Charlie",
     "priority": "Medium",
     "status": "Open",
@@ -29,7 +29,7 @@
   {
     "id": 4,
     "title": "Email not sent",
-    "description": "User not receiving confirmation email",
+    "description": "Users are not receiving confirmation emails after registering or changing their password. Some emails go directly to the spam folder, while others never arrive at all. This is causing delays in onboarding and loss of trust from new users.",
     "customer": "David",
     "priority": "High",
     "status": "Resolved",
@@ -38,7 +38,7 @@
   {
     "id": 5,
     "title": "Report generation slow",
-    "description": "Takes more than 1 minute to load reports",
+    "description": "Generating reports takes more than a minute to complete, causing frustration among team leads who rely on quick data for decision-making. The performance issue seems to occur during peak traffic hours and affects only certain report types.",
     "customer": "Eve",
     "priority": "Low",
     "status": "Open",
@@ -47,16 +47,16 @@
   {
     "id": 6,
     "title": "Mobile app crash",
-    "description": "App crashes when opening settings",
+    "description": "The mobile app crashes unexpectedly whenever a user navigates to the settings page. This issue started after the last update and is affecting both Android and iOS devices. Users are forced to reinstall the app but the issue persists.",
     "customer": "Frank",
-    "priority": "Critical",
+    "priority": "Medium",
     "status": "In Progress",
     "createdAt": "2025-09-15T16:10:00Z"
   },
   {
     "id": 7,
     "title": "Password reset not working",
-    "description": "Reset link expired immediately",
+    "description": "The password reset link expires immediately after it is sent to the user’s email. Multiple reports indicate that the reset page displays an ‘invalid or expired link’ message even when accessed within seconds of receiving the email.",
     "customer": "Grace",
     "priority": "High",
     "status": "Open",
@@ -65,7 +65,7 @@
   {
     "id": 8,
     "title": "Search results inaccurate",
-    "description": "Search returns irrelevant items",
+    "description": "The search feature often returns irrelevant items that don’t match the keywords entered by the user. This is particularly noticeable for category-based searches, where unrelated products or articles appear at the top of the results.",
     "customer": "Hannah",
     "priority": "Medium",
     "status": "In Progress",
@@ -74,7 +74,7 @@
   {
     "id": 9,
     "title": "Notification delay",
-    "description": "Push notifications delayed by 10 minutes",
+    "description": "Push notifications are delayed by 10–15 minutes, preventing users from receiving real-time updates. This issue mainly affects time-sensitive alerts like order confirmations and delivery updates, leading to confusion among customers.",
     "customer": "Ibrahim",
     "priority": "Low",
     "status": "Open",
@@ -83,7 +83,7 @@
   {
     "id": 10,
     "title": "Broken link",
-    "description": "FAQ link leads to 404 page",
+    "description": "The FAQ page link in the footer redirects users to a 404 error page. Several customers have complained about being unable to find the help content they need. This issue is hurting the user experience and increasing support tickets.",
     "customer": "Jack",
     "priority": "Low",
     "status": "Resolved",
@@ -92,7 +92,7 @@
   {
     "id": 11,
     "title": "Export to CSV fails",
-    "description": "Download button doesn’t work",
+    "description": "The download button for exporting reports to CSV format does nothing when clicked. In some cases, it briefly shows a loading spinner but fails silently without showing an error, leaving users unsure about the status of the operation.",
     "customer": "Kate",
     "priority": "High",
     "status": "Open",
@@ -101,7 +101,7 @@
   {
     "id": 12,
     "title": "Dark mode bug",
-    "description": "Text invisible in dark mode",
+    "description": "Text on several pages becomes invisible when dark mode is enabled, especially headings and labels inside form fields. This makes the app nearly unusable for users who prefer or require dark mode for accessibility reasons.",
     "customer": "Leo",
     "priority": "Medium",
     "status": "In Progress",
@@ -110,16 +110,16 @@
   {
     "id": 13,
     "title": "Invoice mismatch",
-    "description": "Wrong amount shown in invoice",
+    "description": "The invoice generated for customers sometimes displays an incorrect amount that does not match the total of the items purchased. This has led to billing disputes and refund requests from several long-term clients.",
     "customer": "Maria",
-    "priority": "Critical",
+    "priority": "High",
     "status": "Open",
     "createdAt": "2025-09-08T14:00:00Z"
   },
   {
     "id": 14,
     "title": "Chat support offline",
-    "description": "Live chat not connecting to agent",
+    "description": "The live chat feature on the support page remains offline even during business hours. Customers trying to contact support agents are unable to start a chat session and instead receive a message stating that agents are unavailable.",
     "customer": "Nina",
     "priority": "High",
     "status": "Resolved",

@@ -4,12 +4,14 @@ import './css/resolved_tickets.css';
 import vectorImage from "./assets/vector1.png";
 import { useEffect, useState } from "react";
 import Tickets from './components/tickets/tickets';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
 
 
+  const [tickets, setTickets] = useState([]);
   const [selectedTickets, setSelectedTickets] = useState([]);
   const [resolvedTickets, setResolvedTickets] = useState([]);
 
@@ -17,6 +19,9 @@ function App() {
   const handleSelect = (ticket) => {
     setSelectedTickets((prev) => {
       if (prev.find((t) => t.id === ticket.id)) return prev;
+      toast.info(`Ticket "${ticket.title}" added to Task Status`, {
+        toastId: `select-${ticket.id}`, // unique ID per ticket
+      });
       return [...prev, ticket];
     });
   };
@@ -24,6 +29,12 @@ function App() {
     setResolvedTickets((prev) => [...prev, ticket]);
 
     setSelectedTickets((prev) => prev.filter((t) => t.id !== ticket.id));
+
+    setTickets((prev) => prev.filter((t) => t.id !== ticket.id));
+    toast.success(`Ticket "${ticket.title}" marked as Resolved!`, {
+      toastId: `complete-${ticket.id}`, // unique ID per ticket
+    });
+
   };
 
 
@@ -90,7 +101,7 @@ function App() {
 
         <div className="main-section">
           <div>
-            <Tickets onSelect={handleSelect} />
+            <Tickets tickets={tickets} setTickets={setTickets} onSelect={handleSelect} />
           </div>
 
           <div className="selected-tickets">
@@ -126,6 +137,7 @@ function App() {
             )}
           </div>
         </div>
+        <ToastContainer position="top-right" autoClose={2000} />
 
 
 

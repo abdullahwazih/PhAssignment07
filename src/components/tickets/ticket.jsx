@@ -1,11 +1,20 @@
+import '../../css/ticket_card.css';
+
 function Ticket({ ticket, onSelect }) {
   const formattedDate = new Date(ticket.createdAt).toLocaleString();
+  const statusClass = ticket.status.toLowerCase().replace(" ", "-");
 
   return (
-    <div className="ticket" onClick={onSelect} style={{ cursor: "pointer" }}>
+    <div
+      className={`ticket ${statusClass}`}
+      onClick={onSelect}
+      style={{ cursor: "pointer" }}
+    >
       <div className="ticket-row-1">
         <h3>{ticket.title}</h3>
-        <div className="ticket-status">{ticket.status}</div>
+        <div className={`ticket-status ${statusClass}`}>
+          {ticket.status}
+        </div>
       </div>
 
       <p className="ticket-description">{ticket.description}</p>
@@ -13,7 +22,7 @@ function Ticket({ ticket, onSelect }) {
       <div className="ticket-row-2">
         <div className="ticket-row-2-left-side">
           <p>#{ticket.id}</p>
-          <p className="text-gap">
+          <p className={`priority-${ticket.priority.toLowerCase()}`}>
             {ticket.priority} <span>Priority</span>
           </p>
         </div>

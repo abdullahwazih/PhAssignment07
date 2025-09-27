@@ -1,24 +1,18 @@
-import { useState, useEffect } from "react";
+
+
+import { useEffect } from "react";
 import Ticket from "./ticket";
 
-function Tickets({ onSelect }) {
-  const [tickets, setTickets] = useState([]);
-  const [loading, setLoading] = useState(true);
+function Tickets({ tickets, setTickets, onSelect }) {
 
+  // Fetch only once when component first mounts
   useEffect(() => {
     fetch("./tickets.json")
       .then((res) => res.json())
-      .then((data) => {
-        setTickets(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error(err);
-        setLoading(false);
-      });
-  }, []);
+      .then((data) => setTickets(data))
+      .catch((err) => console.error(err));
+  }, [setTickets]); // remove "tickets" from dependency
 
-  if (loading) return <p>Loading tickets...</p>;
   if (!tickets.length) return <p>No tickets found.</p>;
 
   return (
@@ -31,3 +25,5 @@ function Tickets({ onSelect }) {
 }
 
 export default Tickets;
+
+
